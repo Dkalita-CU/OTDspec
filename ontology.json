@@ -1,0 +1,2090 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://dkalita-cu.github.io/OTDspec/#Costume"
+    }, {
+      "@id" : "https://dkalita-cu.github.io/OTDspec/#Dance_instruments"
+    }, {
+      "@id" : "https://dkalita-cu.github.io/OTDspec/#Musical_instruments"
+    }, {
+      "@id" : "https://dkalita-cu.github.io/OTDspec/#Ornaments"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid10",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Axiom" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "When the Dance is perdormed on some religious festivals, often in those dances prayers are offered to some God by various comminities."
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedProperty" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#domain"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#prayersOfferredTo"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
+    "@id" : "_:genid9"
+  } ]
+}, {
+  "@id" : "_:genid11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://dkalita-cu.github.io/OTDspec/#Costume"
+    }, {
+      "@id" : "https://dkalita-cu.github.io/OTDspec/#Ornaments"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid14",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://dkalita-cu.github.io/OTDspec/#Costume"
+    }, {
+      "@id" : "https://dkalita-cu.github.io/OTDspec/#Instruments"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid17",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://dkalita-cu.github.io/OTDspec/#Costume"
+    }, {
+      "@id" : "https://dkalita-cu.github.io/OTDspec/#Ornaments"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://dkalita-cu.github.io/OTDspec/#Instruments"
+    }, {
+      "@id" : "https://dkalita-cu.github.io/OTDspec/#Ornaments"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#performanceOccasion"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#ReligiousFestival"
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/language",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/abstract",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/available",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/license",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.semanticweb.org/deep/ontologies/2018/4/otd#competancyQuestion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/Person",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/elements/1.1/language" : [ {
+    "@language" : "en",
+    "@value" : "English"
+  } ],
+  "http://purl.org/dc/terms/abstract" : [ {
+    "@language" : "en",
+    "@value" : "Traditional dances are single source output of various socio-cultural, socio-economic, socio-religious activities of various communities and the accumulated knowledge base of traditional dances can serve various information need of a diverse population. The proposd ontology here on traditional dances would create a scalable abstract system for the socio-cultural elements associated with traditional dances. This would facilitate information search at various levels with various use intention. For example, a fashion blogger might search for information about traditional dresses associated with particular traditional dances of a specific community while a textile expert may wish to know about the detailed pattern of their preparation. Same information might also be sought for by a dancer while recreating the dances. Again a musician/an archaeologist might look for information about the instruments used in the dance performances. Logical knowledge inferencing property would make the knowledge base usable for third party application like lifestyle based e-commerce sites, e-learning platforms etc."
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@language" : "en",
+    "@value" : "Deepjyoti Kalita (Cotton University, Department of Library and Information Science, Guwahati, Assam, India)\n\n\nDipen Deka (Gauhati University, Department of Library and Information Science, Guwahati, Assam, India)"
+  }, {
+    "@language" : "en",
+    "@value" : "Deepjyoti Kalita,\nDepartment of Library and Information Science,\nCotton University, Guwahati, Assam, India.\ndeepjyoti.kalita@cottonuniversity.ac.in\n\nDipen Deka,\nDepartment of Library and Information Science,\nGauhati University, Guwahati, Assam, India."
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@language" : "en",
+    "@value" : "https://creativecommons.org/licenses/by/4.0/"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en",
+    "@value" : "Ontology for the knowledge base of traditional dances"
+  } ],
+  "http://www.semanticweb.org/deep/ontologies/2018/4/otd#competancyQuestion" : [ {
+    "@language" : "en",
+    "@value" : "CQs are natural language questions relating to the ontology scope and can be considered as a functional requirement which a developed ontology should be able to answer (Uschold and Gruninger, 1996). Ontology validation via CQ based SPARQL querries is a suggested practice in many methodologies (Wiśniewski et al, 2019).\n\nCQ 1: Name of different traditional dances of different communities?\nCQ 2: Related festivals to a particular traditional dance.\nCQ3: Ornaments used in traditional dance performance.\nCQ4: Different ornaments worn in different traditional dances and the Gender who wear them\nCQ5: What kind of dresses a particular community wears in traditional dances."
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Abahoni",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#UnisexGroupDance" ],
+  "https://dkalita-cu.github.io/OTDspec/#originCountry" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#India"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#originState" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Assam"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#requiredCostume" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Kambang"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Pajar"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Patani"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Phali"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#requiredDanceInstruments" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Khuchung-Khapak"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Thungri"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#requiredMusicalInstruments" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Daidi"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Kara"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Kham"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Muk-Brangsi"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Singa"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Aerophones",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "@value" : "produce sound by vibrating columns of air eg Basuri"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Musical_instruments"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#AgrianOccasion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Occasions related to agricultural process."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Occasion"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#FamilyOccasion"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#FestiveOccasion"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#AgriculturalTool",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Tools which are used in agricultural activities"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Dance_instruments"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Animal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class for replica item that represents an animal."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#ReplicaItems"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#AnimalPart",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class to represent any type of material which is derived of animal, especially different animal parts are used to make traditional war or musical instruments. This class includes those parts that come from animal."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Materials"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#BirdPart"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#PlantPart"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Soil"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Anklet",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Ornaments worn at the ankle of foot."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Ornaments"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Bracelet"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Earings"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#NoseRing"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Arrow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#WarTool"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Assam",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#State" ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Badung-duppa",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#TripleChorded" ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Bak-Chali",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#ShirtType" ],
+  "https://dkalita-cu.github.io/OTDspec/#associatedGender" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Male"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#hasColour" : [ {
+    "@language" : "en",
+    "@value" : "Green"
+  }, {
+    "@language" : "en",
+    "@value" : "Red"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#hasDesignPattern" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Checked"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Bamboo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#PlantPart" ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Bell_Metal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#Metal" ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Bird",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class for replica items that represents a bird."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#ReplicaItems"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#BirdPart",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class to represent instruments material which are got from Birds."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Materials"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#PlantPart"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Soil"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Bird_Maslenka",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#Bird" ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#BlouseType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Dress type usually worn in upper body part covering the breast area of women"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Costume"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Bohurongi",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#FemaleGroupDance" ],
+  "https://dkalita-cu.github.io/OTDspec/#originCountry" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#India"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#originState" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Assam"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#performanceOccasion" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Religious_Social_Gatherings"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#relatedCommunity" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Rabha"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#requiredCostume" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Khapang"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Patani"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Phali"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#requiredDanceInstruments" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Jakoi"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Lunkhi"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#requiredMusicalInstruments" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Kham"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Muk-Brangsi"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Tal"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Thorka"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Bow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#WarTool"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#BowlTypeSingleSided",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Membranophone shaed as bowl with membrane in one side."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Membranophones"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#BowlTypeSingleSidedLarge",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Bowl shaped membranophone larger in size with a membrane in one side, usually played by placing the instrument on ground or some frame."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Membranophones"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Bracelet",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Ornaments worn at the ankle of hand."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Ornaments"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Earings"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#NoseRing"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Brass",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#Metal" ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Buffalo_horn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#AnimalPart" ],
+  "https://dkalita-cu.github.io/OTDspec/#isUsedToMake" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Singa"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Cannon",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#WarTool"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Checked",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#DesignPattern" ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Childbirth",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#FamilyOccasion" ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Chordophones",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "@value" : "string instruments like dotara"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Musical_instruments"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Community",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class to represent diferent tribes and communities."
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Costume",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class for Dresses worn at various Trditional Dance prformances"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#CostumeDesignLanguage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class to define the design pattern of Dresses  like the design pattern is floral or checked, what is the weaving style, what type of yarn is used to prepare the dress etc."
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Country",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Represents a country."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#GeographicalLocation"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Cultivating",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#AgrianOccasion"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Da",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#AgriculturalTool" ],
+  "https://dkalita-cu.github.io/OTDspec/#associatedGender" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Male"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Daidi",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#Idiophones" ],
+  "https://dkalita-cu.github.io/OTDspec/#diameter" : [ {
+    "@language" : "en",
+    "@value" : "6 to 9 inches"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#isMadeOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Bell_Metal"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Dance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class for dance."
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Dance_instruments",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Instruments used as a dance tool"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Instruments"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Musical_instruments"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#DesignPattern",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class to represent different design patterns of traditional dreses. For example Floral print can be a design pattern of dress."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#CostumeDesignLanguage"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#DoubleChorded",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "String instruments that have two strings vibrting which sound is produced"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Chordophones"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#DoubleSidedLongDrum",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Membranophone longer sized tunnel shaped with membranes on two sides."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Membranophones"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#DoubleSidedShortDrum",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Membranophone short sized tunnel shaped with membrane on two sides."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Membranophones"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Drummer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class for persons playing drums."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Musician"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Earings",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Ornaments worn at ear."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Ornaments"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#NoseRing"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Fakranti",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#UnisexGroupDance" ],
+  "https://dkalita-cu.github.io/OTDspec/#originCountry" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#India"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#originState" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Assam"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#performanceOccasion" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Funeral"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#relatedCommunity" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Rabha"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#requiredCostume" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Kambang"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Pajal"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Pajar"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Patani"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#requiredDanceInstruments" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Khuchung-Khapak"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Maslenka"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Thungri"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#requiredMusicalInstruments" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Daidi"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Kham"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Muk-Brangsi"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#FamilyOccasion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class for different family occasions like marriage, child birth etc."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Occasion"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#FestiveOccasion"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Female",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#Gender" ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#FemaleGroupDance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class for traditional dances which are performed as a group and all members of the group are Female"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#TraditionalDance"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#FestiveOccasion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Festive occasions of different community and tribes."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Occasion"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#FishingTool",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Tools which are used for fishing purpose."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Dance_instruments"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Floral",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#DesignPattern" ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Flutist",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class for persons playing flute."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Musician"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Funeral",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#FamilyOccasion" ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Gamana",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#SingleChorded" ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Gender",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class for Human Genders"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#GeographicalLocation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class to represent the location of a particular traditional dance where it is practiced."
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#God",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Various Traditional Dances rare of religius nature and in such performances prayers are offered to Gods. This class is for Gods"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Gomari_Wood",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#PlantPart" ],
+  "https://dkalita-cu.github.io/OTDspec/#isUsedToMake" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Kham"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Gun",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#WarTool"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Hamjha_Festival",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#Cultivating" ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Hamjhar",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#UnisexGroupDance" ],
+  "https://dkalita-cu.github.io/OTDspec/#originCountry" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#India"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#originState" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Assam"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#performanceOccasion" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Hamjha_Festival"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#relatedCommunity" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Rabha"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#requiredCostume" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Bak-Chali"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Kambang"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Khapang"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Pajal"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Pajar"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Patani"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Rufan"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#requiredDanceInstruments" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Da"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Kodal"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Kuthar"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Lunkhi"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#requiredMusicalInstruments" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Kham"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Muk-Brangsi"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#requiredOrnaments" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Hancha"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Makring"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Nakapati"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Rubak_mala"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Hancha",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#Necklace" ],
+  "https://dkalita-cu.github.io/OTDspec/#associatedGender" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Female"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#isMadeOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Silver"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Harvesting",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#AgrianOccasion"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Headgear",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Dress type worn covering the head or the forehead like a cap. Usually worn by both man and woman."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Costume"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#HuntingTool",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Tools which are used for hunting."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Dance_instruments"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Idiophones",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "@value" : "Produce sound by vibrating themselves generally non drum percussian instruments"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Musical_instruments"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#India",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#Country" ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#IndividualFemaleDance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class for traditional dances which are performed by only a single individual dancer whose gender is female"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#TraditionalDance"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#IndividualMaleDance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class for traditional dances which are performed by only a single individual dancer whose gender is Male"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#TraditionalDance"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Instruments",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Instruments implies to specific tools used in the dance performance. Musical instruments and instruments used as dance props are covered under this class."
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Iron",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#Metal" ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Ivory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#AnimalPart" ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Jakoi",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#FishingTool" ],
+  "https://dkalita-cu.github.io/OTDspec/#associatedGender" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Female"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#isMadeOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Bamboo"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Kambang",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#WrapperType" ],
+  "https://dkalita-cu.github.io/OTDspec/#associatedGender" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Female"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#breadth" : [ {
+    "@language" : "en",
+    "@value" : "12 inches"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#hasColour" : [ {
+    "@language" : "en",
+    "@value" : "Red"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#length" : [ {
+    "@language" : "en",
+    "@value" : "36 inches"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#wornAt" : [ {
+    "@language" : "en",
+    "@value" : "Breast"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Kara",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#Aerophones" ],
+  "https://dkalita-cu.github.io/OTDspec/#isMadeOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Nal_Bamboo"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#length" : [ {
+    "@language" : "en",
+    "@value" : "84 inches"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Kham",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#DoubleSidedLongDrum" ],
+  "https://dkalita-cu.github.io/OTDspec/#diameter" : [ {
+    "@language" : "en",
+    "@value" : "18 inches"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#length" : [ {
+    "@language" : "en",
+    "@value" : "54 inches"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Khapang",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#TurbanType" ],
+  "https://dkalita-cu.github.io/OTDspec/#associatedGender" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Unisex"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#breadth" : [ {
+    "@language" : "en",
+    "@value" : "12 inches"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#hasColour" : [ {
+    "@language" : "en",
+    "@value" : "Red"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#hasDesignPattern" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Floral"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#length" : [ {
+    "@language" : "en",
+    "@value" : "48 inches"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Khuchung-Khapak",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#Shield" ],
+  "https://dkalita-cu.github.io/OTDspec/#associatedGender" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Female"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Male"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#diameter" : [ {
+    "@language" : "en",
+    "@value" : "18 inches"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Kodal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#AgriculturalTool" ],
+  "https://dkalita-cu.github.io/OTDspec/#isMadeOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Bamboo"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Iron"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Kuthar",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#AgriculturalTool" ],
+  "https://dkalita-cu.github.io/OTDspec/#associatedGender" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Male"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#isMadeOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Iron"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Lunkhi",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#AgriculturalTool" ],
+  "https://dkalita-cu.github.io/OTDspec/#associatedGender" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Female"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#isMadeOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Bamboo"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Makring",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#Earings" ],
+  "https://dkalita-cu.github.io/OTDspec/#associatedGender" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Female"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#isMadeOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Brass"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Male",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#Gender" ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#MaleGroupDance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class for traditional dances which are performed as a group and all members of the group are Male"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#TraditionalDance"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Marriage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#FamilyOccasion" ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Maslenka",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#ReplicaTool" ],
+  "https://dkalita-cu.github.io/OTDspec/#associatedGender" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Male"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#isMadeOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Wood"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#replicates" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Bird_Maslenka"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Materials",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The traditional dances requires the use of different type of musical instruments. Also in the dance performances there are various tools from day to day life  which are used as dance props. This class includes the name of such materials by which the instruments are made off."
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Membranophones",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "@value" : "produce sound by a vibrating membrane eg drums"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Musical_instruments"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Metal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class for different metalic objects."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Materials"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Soil"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#MufflerType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Dress type usually worn covering the neck area. Worn by both man and woman"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Costume"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Muk-Brangsi",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#Aerophones" ],
+  "https://dkalita-cu.github.io/OTDspec/#isMadeOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Nal_Bamboo"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#length" : [ {
+    "@language" : "en",
+    "@value" : "18 inches"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Musical_instruments",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Instruments used in the music of the dance performance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Instruments"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Musician",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class for participants having duty with music."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Role"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Nakapati",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#NoseRing" ],
+  "https://dkalita-cu.github.io/OTDspec/#associatedGender" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Female"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Nal_Bamboo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#PlantPart" ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#NaturalYarn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Yarn that is found naturally."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Yarn"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Necklace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class to represent ornaments that are worn at neck."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Ornaments"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#NoseRing",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Ornaments worn at Nose."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Ornaments"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Occasion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class to represent the different occasions to which specific traditional dances are related to."
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Ornaments",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This implies to specific ornamental items."
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Pajal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#WrapperType" ],
+  "https://dkalita-cu.github.io/OTDspec/#associatedGender" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Male"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#breadth" : [ {
+    "@language" : "en",
+    "@value" : "2.5 feet"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#hasColour" : [ {
+    "@language" : "en",
+    "@value" : "Green"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#length" : [ {
+    "@language" : "en",
+    "@value" : "7 feet"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#wornAt" : [ {
+    "@language" : "en",
+    "@value" : "waist"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Pajar",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#MufflerType" ],
+  "https://dkalita-cu.github.io/OTDspec/#associatedGender" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Male"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#associatedWeavingStyle" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Plain_Weaving"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#hasColour" : [ {
+    "@language" : "en",
+    "@value" : "Red"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#hasDesignPattern" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Floral"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Patani",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#WrapperType" ],
+  "https://dkalita-cu.github.io/OTDspec/#associatedGender" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Female"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#associatedWeavingStyle" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Plain_Weaving"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#hasDesignPattern" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Floral"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#wornAt" : [ {
+    "@language" : "en",
+    "@value" : "Waist"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Perticipants",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class person s a union of class male and female.\n\nRepresents agent."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Person"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Phali",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#Waistcloth" ],
+  "https://dkalita-cu.github.io/OTDspec/#associatedGender" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Unisex"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#breadth" : [ {
+    "@language" : "en",
+    "@value" : "12 inches"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#hasColour" : [ {
+    "@language" : "en",
+    "@value" : "Green"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#hasDesignPattern" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Floral"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#length" : [ {
+    "@language" : "en",
+    "@value" : "48 inches"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Plain_Weaving",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#WeavingStyle" ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#PlantPart",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class to define any type of material used for instrument making which is derived from Plants."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Materials"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Soil"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Rabha",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#Community" ],
+  "https://dkalita-cu.github.io/OTDspec/#haveCostume" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Kambang"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Khapang"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Pajal"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Pajar"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Patani"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Rufan"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#haveDances" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Abahoni"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Bohurongi"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Fakranti"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Hamjhar"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#haveInstruments" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Badung-duppa"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Da"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Daidi"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Gamana"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Jakoi"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Kara"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Kodal"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Kuthar"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Lunkhi"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Muk-Brangsi"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Singa"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Tal"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Tarsa"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Thorka"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#haveOrnaments" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Hancha"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Makring"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Nakapati"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Rubak_mala"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#ReligiousFestival",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Festival of religious sentiments when prayers are made to satisfy certain Gods."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#FestiveOccasion"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#SeasonalFestival"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Religious_Social_Gatherings",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#ReligiousFestival" ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#ReplicaItems",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "In traditional Dances , dancesr uses different types of items generaly handmade which are some replication of natural entities like an animal or a bird etc. For example in the Maselenka dance of Rabhas, the dances take a special handmade wooden frame that represents the bird Maslenka. This class includes the real name of the items used as replica items."
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#ReplicaTool",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Tools designed to replicate some animal, object etc. For example in the Hanaghora dances of Rabha community, they uses a woden made horse in hand to replicate a Horse."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Dance_instruments"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Role",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class for different roles of different participants in a traditional dance."
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Rubak_mala",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#Waistlet" ],
+  "https://dkalita-cu.github.io/OTDspec/#associatedGender" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Female"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#isMadeOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Ivory"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Rufan",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#WrapperType" ],
+  "https://dkalita-cu.github.io/OTDspec/#associatedGender" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Female"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#breadth" : [ {
+    "@language" : "en",
+    "@value" : "24 inches"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#hasColour" : [ {
+    "@language" : "en",
+    "@value" : "Green"
+  }, {
+    "@language" : "en",
+    "@value" : "Red"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#hasDesignPattern" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Floral"
+  } ],
+  "https://dkalita-cu.github.io/OTDspec/#length" : [ {
+    "@language" : "en",
+    "@value" : "36 inches"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Season",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class for different seasons of the year."
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#SeasonalFestival",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Festival related to calender year. For example festivals like new calender year, starting of  season, monsoon etc."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#FestiveOccasion"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Shield",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#WarTool"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#ShirtType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "a dress type worn in covering the upper body, usually have sleeves and buttons. Generally worn by man"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Costume"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Silver",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#Metal" ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Singa",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#Aerophones" ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Singer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Role"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#SingleChorded",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "String instruments that have a single string vibrating which sound is produced"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Chordophones"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#SingleSidedLongDrum",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Membranophone longer tunnel shaped with membrane n one side."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Membranophones"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#SingleSidedShortDrum",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Membranophone short tunnel shaped with membrane on one side."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Membranophones"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Soil",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class for soil like materials."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Materials"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Songs",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class for different songs used in traditional dances. Usually the mukhra part of the song can be written here."
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Spear",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#WarTool"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#State",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Represents a state inside a country."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#GeographicalLocation"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#SuperNaturalEntity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class for replica items that represents some super natural items like a ghost etc."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#ReplicaItems"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Sword",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#WarTool"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#SyntheticYarn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Yarn that is produced artificially."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Yarn"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Tal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#Idiophones" ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Tarsa",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#DoubleSidedLongDrum" ],
+  "https://dkalita-cu.github.io/OTDspec/#diameter" : [ {
+    "@language" : "en",
+    "@value" : "6 to 9 inches"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Thorka",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#Idiophones" ],
+  "https://dkalita-cu.github.io/OTDspec/#isMadeOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Bamboo"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Thungri",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#Sword" ],
+  "https://dkalita-cu.github.io/OTDspec/#associatedGender" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Female"
+  }, {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Male"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#TraditionalDance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Dance"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#TripleChorded",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "String instruments that have three connected strings"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Chordophones"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#TurbanType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "a dress type of long lengt material usually worn covering the head"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Costume"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Unisex",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#Gender" ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#UnisexGroupDance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class for traditional dances which are performed as a group and all members of the group should be Male and Female"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#TraditionalDance"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Utensil",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Different items and instruments that are used in cooking process"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Dance_instruments"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#VeilType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "a dress type worn covering the face. Usually worn by woman"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Costume"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Waistcloth",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "a piece of cloth teid around the waist."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Costume"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Waistlet",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Ornaments worn around the waist. Note: There is a different class for cloths worn around the waist."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Ornaments"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#War",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Some communities celebrate some festivals relating to different wars."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Occasion"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#WarTool",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Weaponery used in Wars."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Dance_instruments"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#WeavingStyle",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class to represent different types of weaving style used to prepare certain dress."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#CostumeDesignLanguage"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Wood",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://dkalita-cu.github.io/OTDspec/#PlantPart" ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#WrapperType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "any type of plain long length cloth worn by wrapping around the body."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Costume"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#Yarn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class to represent different types of yarn used to prepapre the dress."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#CostumeDesignLanguage"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#associatedGender",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Different ornaments, costumes, instruments used in the traditional dances performance has a specific gender by which that item will be used in that particular dance. This property connects a associated gender of such items."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid1"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Gender"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#associatedWeavingStyle",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Traditional dances usually uses traditionally prepared cloths as costume. Traditional costumes usually have traditional preparatio method. this property is used to connect the specific weaving style of traditional dresses."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Costume"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#WeavingStyle"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#breadth",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : ""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#hasSize"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#competancyQuestion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#costumeFor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#requiredCostume"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#danceInstrumentsFor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#requiredDanceInstruments"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#diameter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#hasSize"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#genericUsage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Different day to day items are used as dance instrument in the performance of traditional dances, e.g: Like traditional dances related to agricultural activity sees the use of agricultural tools as a dance instrument. This property represents the generic usage of such tools."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Dance_instruments"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#hasColour",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Traditional dance costumes, ornaments have specific colours related to a specific dance. This property is used to represent the colour of such items."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid11"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#hasDesignPattern",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Traditional dance costumes of different dances have specific design patterns. This property is used to connect a costume to the specific design pattern present in the costume."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Costume"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#DesignPattern"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#isDesignPatternFor"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#hasGender",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Property connecting the Person to its gender."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Person"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Gender"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#hasLyrics",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This property is used to represent the lyrics of songs used in specific dances performances"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Songs"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#hasName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Person"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#hasRepresentationAs",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Property to connect an Image URI of its related domains"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#hasRole",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Different persons involved in a traditional dance performance has different roles like musician, singer, lead dancer etc. This property connects a person to the specific role he/she has i the dance performance."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Person"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Role"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#hasSize",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Dance intruments, musical instruments, clothes might have specific sizes. This property is used to represent sizes. For example a  Drum has Length and Radius of Faces."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid14"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#haveCostume",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Specific communities have specific type of costumes. This costumes are used in the traditional dances of that particular community. This property connects a community to the specific type of costumes of that community"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Community"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Costume"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#haveDances",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Property to connect a Community to the Dances it has."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Community"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Dance"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#haveInstruments",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Specific communities have specific type of instruments. This intruments are used in the traditional dances of that particular community. This property connects a community to the specific type of instruments of that community"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Community"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Instruments"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#haveOrnaments",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Specific communities have specific type of ornaments. This ornaments are used in the traditional dances of that particular community. This property connects a community to the specific type of ornaments of that community."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Community"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Ornaments"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#isDesignPatternFor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#isMadeOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Traditional dance instruments, musical instruments are made of some natural objects/items. This property connects a instrument to the object/item by which it is made."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid6"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Materials"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#isUsedToMake"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#isUsedToMake",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#length",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#hasSize"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#mukhdaOftheSong",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Songs"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#musicalInstrumentsFor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#requiredMusicalInstruments"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#originCountry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This property connects a dance to the origin geographic country where it is located. Usually it referes to the location of the specific tribe/community with whom the dance is related."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Dance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Country"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#originState",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This property connects a dance to the origin geographic state where it is located. Usually it referes to the location of the specific tribe/community with whom the dance is related."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Dance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#State"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#ornamentsFor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#requiredOrnaments"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#performanceOccasion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Traditional dances are often related with specific occasion. This property connects a dance to the related performance occasion."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Dance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Occasion"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#performanceSeason",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Traditional dances are performed in various seasons of the year like spring, autumn, winter etc. This property connects a dance to the specific season when it is usually performed."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Dance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Season"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#prayersOfferredTo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "In some traditional dances related to some religious occasion, where prayer is offered to specific God. This property connects a dance to the God to whom prayer is made."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid9"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#God"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#relatedCommunity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Traditional dances are related to different tribes and communites. This property connects a dance to its related community."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Dance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Community"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#replicates",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Some dance instruments used in traditional dances uses some tools that replictes some natural items/objects. This property connects such a tool to the natural objects which it replicates."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#ReplicaTool"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#ReplicaItems"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#requiredCostume",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Traditional dances require specific type of costumes. Property connects dances to its required costumes."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Dance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Costume"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#requiredDanceInstruments",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Property that connects a Dance to the different dances instruments required for a specific dance."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Dance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Dance_instruments"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#requiredMusicalInstruments",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Property that connects a Dance to the specific musical instruments used for  specific dance."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Dance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Musical_instruments"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#requiredOrnaments",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Property that connects a dance to the specific ornaments worn during the performance of a specific traditional dance."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Dance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Ornaments"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#requiredSong",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Property that connects a Dance to the specific song sang during the performance of a specific dance."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Dance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Songs"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#wornAt",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The perticipants in traditional dances wear different clothes. This property connects the clothes to the body part where they are worn."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid17"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  } ]
+}, {
+  "@id" : "https://dkalita-cu.github.io/OTDspec/#yarnUsed",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Traditional dance costumes are often prepared following traditional methods. This property connects a Costume to the specific type of yarn used in preparation of that costume."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Costume"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dkalita-cu.github.io/OTDspec/#Yarn"
+  } ]
+} ]

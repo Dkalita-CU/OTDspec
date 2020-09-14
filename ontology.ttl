@@ -1,0 +1,1387 @@
+@prefix : <https://dkalita-cu.github.io/OTDspec/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://dkalita-cu.github.io/OTDspec/> .
+
+<https://dkalita-cu.github.io/OTDspec/> rdf:type owl:Ontology ;
+                                         <http://purl.org/dc/elements/1.1/language> "English"@en ;
+                                         <http://purl.org/dc/terms/abstract> "Traditional dances are single source output of various socio-cultural, socio-economic, socio-religious activities of various communities and the accumulated knowledge base of traditional dances can serve various information need of a diverse population. The proposd ontology here on traditional dances would create a scalable abstract system for the socio-cultural elements associated with traditional dances. This would facilitate information search at various levels with various use intention. For example, a fashion blogger might search for information about traditional dresses associated with particular traditional dances of a specific community while a textile expert may wish to know about the detailed pattern of their preparation. Same information might also be sought for by a dancer while recreating the dances. Again a musician/an archaeologist might look for information about the instruments used in the dance performances. Logical knowledge inferencing property would make the knowledge base usable for third party application like lifestyle based e-commerce sites, e-learning platforms etc."@en ;
+                                         <http://purl.org/dc/terms/creator> """Deepjyoti Kalita (Cotton University, Department of Library and Information Science, Guwahati, Assam, India)
+
+
+Dipen Deka (Gauhati University, Department of Library and Information Science, Guwahati, Assam, India)"""@en ,
+                                                                            """Deepjyoti Kalita,
+Department of Library and Information Science,
+Cotton University, Guwahati, Assam, India.
+deepjyoti.kalita@cottonuniversity.ac.in
+
+Dipen Deka,
+Department of Library and Information Science,
+Gauhati University, Guwahati, Assam, India."""@en ;
+                                         <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0/"@en ;
+                                         <http://purl.org/dc/terms/title> "Ontology for the knowledge base of traditional dances"@en ;
+                                         <http://www.semanticweb.org/deep/ontologies/2018/4/otd#competancyQuestion> """CQs are natural language questions relating to the ontology scope and can be considered as a functional requirement which a developed ontology should be able to answer (Uschold and Gruninger, 1996). Ontology validation via CQ based SPARQL querries is a suggested practice in many methodologies (Wiśniewski et al, 2019).
+
+CQ 1: Name of different traditional dances of different communities?
+CQ 2: Related festivals to a particular traditional dance.
+CQ3: Ornaments used in traditional dance performance.
+CQ4: Different ornaments worn in different traditional dances and the Gender who wear them
+CQ5: What kind of dresses a particular community wears in traditional dances."""@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/language
+<http://purl.org/dc/elements/1.1/language> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/available
+<http://purl.org/dc/terms/available> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.semanticweb.org/deep/ontologies/2018/4/otd#competancyQuestion
+<http://www.semanticweb.org/deep/ontologies/2018/4/otd#competancyQuestion> rdf:type owl:AnnotationProperty .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#competancyQuestion
+<https://dkalita-cu.github.io/OTDspec/#competancyQuestion> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://dkalita-cu.github.io/OTDspec/#associatedGender
+<https://dkalita-cu.github.io/OTDspec/#associatedGender> rdf:type owl:ObjectProperty ;
+                                                         rdfs:subPropertyOf owl:topObjectProperty ;
+                                                         rdfs:domain [ rdf:type owl:Class ;
+                                                                       owl:unionOf ( <https://dkalita-cu.github.io/OTDspec/#Costume>
+                                                                                     <https://dkalita-cu.github.io/OTDspec/#Dance_instruments>
+                                                                                     <https://dkalita-cu.github.io/OTDspec/#Musical_instruments>
+                                                                                     <https://dkalita-cu.github.io/OTDspec/#Ornaments>
+                                                                                   )
+                                                                     ] ;
+                                                         rdfs:range <https://dkalita-cu.github.io/OTDspec/#Gender> ;
+                                                         rdfs:comment "Different ornaments, costumes, instruments used in the traditional dances performance has a specific gender by which that item will be used in that particular dance. This property connects a associated gender of such items."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#associatedWeavingStyle
+<https://dkalita-cu.github.io/OTDspec/#associatedWeavingStyle> rdf:type owl:ObjectProperty ;
+                                                               rdfs:domain <https://dkalita-cu.github.io/OTDspec/#Costume> ;
+                                                               rdfs:range <https://dkalita-cu.github.io/OTDspec/#WeavingStyle> ;
+                                                               rdfs:comment "Traditional dances usually uses traditionally prepared cloths as costume. Traditional costumes usually have traditional preparatio method. this property is used to connect the specific weaving style of traditional dresses."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#costumeFor
+<https://dkalita-cu.github.io/OTDspec/#costumeFor> rdf:type owl:ObjectProperty ;
+                                                   owl:inverseOf <https://dkalita-cu.github.io/OTDspec/#requiredCostume> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#danceInstrumentsFor
+<https://dkalita-cu.github.io/OTDspec/#danceInstrumentsFor> rdf:type owl:ObjectProperty ;
+                                                            owl:inverseOf <https://dkalita-cu.github.io/OTDspec/#requiredDanceInstruments> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#hasDesignPattern
+<https://dkalita-cu.github.io/OTDspec/#hasDesignPattern> rdf:type owl:ObjectProperty ;
+                                                         owl:inverseOf <https://dkalita-cu.github.io/OTDspec/#isDesignPatternFor> ;
+                                                         rdfs:domain <https://dkalita-cu.github.io/OTDspec/#Costume> ;
+                                                         rdfs:range <https://dkalita-cu.github.io/OTDspec/#DesignPattern> ;
+                                                         rdfs:comment "Traditional dance costumes of different dances have specific design patterns. This property is used to connect a costume to the specific design pattern present in the costume."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#hasGender
+<https://dkalita-cu.github.io/OTDspec/#hasGender> rdf:type owl:ObjectProperty ,
+                                                           owl:FunctionalProperty ;
+                                                  rdfs:domain <http://xmlns.com/foaf/0.1/Person> ;
+                                                  rdfs:range <https://dkalita-cu.github.io/OTDspec/#Gender> ;
+                                                  rdfs:comment "Property connecting the Person to its gender."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#hasRole
+<https://dkalita-cu.github.io/OTDspec/#hasRole> rdf:type owl:ObjectProperty ;
+                                                rdfs:domain <http://xmlns.com/foaf/0.1/Person> ;
+                                                rdfs:range <https://dkalita-cu.github.io/OTDspec/#Role> ;
+                                                rdfs:comment "Different persons involved in a traditional dance performance has different roles like musician, singer, lead dancer etc. This property connects a person to the specific role he/she has i the dance performance."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#haveCostume
+<https://dkalita-cu.github.io/OTDspec/#haveCostume> rdf:type owl:ObjectProperty ;
+                                                    rdfs:domain <https://dkalita-cu.github.io/OTDspec/#Community> ;
+                                                    rdfs:range <https://dkalita-cu.github.io/OTDspec/#Costume> ;
+                                                    rdfs:comment "Specific communities have specific type of costumes. This costumes are used in the traditional dances of that particular community. This property connects a community to the specific type of costumes of that community"@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#haveDances
+<https://dkalita-cu.github.io/OTDspec/#haveDances> rdf:type owl:ObjectProperty ;
+                                                   rdfs:domain <https://dkalita-cu.github.io/OTDspec/#Community> ;
+                                                   rdfs:range <https://dkalita-cu.github.io/OTDspec/#Dance> ;
+                                                   rdfs:comment "Property to connect a Community to the Dances it has."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#haveInstruments
+<https://dkalita-cu.github.io/OTDspec/#haveInstruments> rdf:type owl:ObjectProperty ;
+                                                        rdfs:domain <https://dkalita-cu.github.io/OTDspec/#Community> ;
+                                                        rdfs:range <https://dkalita-cu.github.io/OTDspec/#Instruments> ;
+                                                        rdfs:comment "Specific communities have specific type of instruments. This intruments are used in the traditional dances of that particular community. This property connects a community to the specific type of instruments of that community"@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#haveOrnaments
+<https://dkalita-cu.github.io/OTDspec/#haveOrnaments> rdf:type owl:ObjectProperty ;
+                                                      rdfs:domain <https://dkalita-cu.github.io/OTDspec/#Community> ;
+                                                      rdfs:range <https://dkalita-cu.github.io/OTDspec/#Ornaments> ;
+                                                      rdfs:comment "Specific communities have specific type of ornaments. This ornaments are used in the traditional dances of that particular community. This property connects a community to the specific type of ornaments of that community."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#isDesignPatternFor
+<https://dkalita-cu.github.io/OTDspec/#isDesignPatternFor> rdf:type owl:ObjectProperty .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#isMadeOf
+<https://dkalita-cu.github.io/OTDspec/#isMadeOf> rdf:type owl:ObjectProperty ;
+                                                 owl:inverseOf <https://dkalita-cu.github.io/OTDspec/#isUsedToMake> ;
+                                                 rdfs:domain [ rdf:type owl:Class ;
+                                                               owl:unionOf ( <https://dkalita-cu.github.io/OTDspec/#Instruments>
+                                                                             <https://dkalita-cu.github.io/OTDspec/#Ornaments>
+                                                                           )
+                                                             ] ;
+                                                 rdfs:range <https://dkalita-cu.github.io/OTDspec/#Materials> ;
+                                                 rdfs:comment "Traditional dance instruments, musical instruments are made of some natural objects/items. This property connects a instrument to the object/item by which it is made."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#isUsedToMake
+<https://dkalita-cu.github.io/OTDspec/#isUsedToMake> rdf:type owl:ObjectProperty .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#musicalInstrumentsFor
+<https://dkalita-cu.github.io/OTDspec/#musicalInstrumentsFor> rdf:type owl:ObjectProperty ;
+                                                              owl:inverseOf <https://dkalita-cu.github.io/OTDspec/#requiredMusicalInstruments> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#originCountry
+<https://dkalita-cu.github.io/OTDspec/#originCountry> rdf:type owl:ObjectProperty ;
+                                                      rdfs:domain <https://dkalita-cu.github.io/OTDspec/#Dance> ;
+                                                      rdfs:range <https://dkalita-cu.github.io/OTDspec/#Country> ;
+                                                      rdfs:comment "This property connects a dance to the origin geographic country where it is located. Usually it referes to the location of the specific tribe/community with whom the dance is related."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#originState
+<https://dkalita-cu.github.io/OTDspec/#originState> rdf:type owl:ObjectProperty ;
+                                                    rdfs:domain <https://dkalita-cu.github.io/OTDspec/#Dance> ;
+                                                    rdfs:range <https://dkalita-cu.github.io/OTDspec/#State> ;
+                                                    rdfs:comment "This property connects a dance to the origin geographic state where it is located. Usually it referes to the location of the specific tribe/community with whom the dance is related."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#ornamentsFor
+<https://dkalita-cu.github.io/OTDspec/#ornamentsFor> rdf:type owl:ObjectProperty ;
+                                                     owl:inverseOf <https://dkalita-cu.github.io/OTDspec/#requiredOrnaments> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#performanceOccasion
+<https://dkalita-cu.github.io/OTDspec/#performanceOccasion> rdf:type owl:ObjectProperty ;
+                                                            rdfs:domain <https://dkalita-cu.github.io/OTDspec/#Dance> ;
+                                                            rdfs:range <https://dkalita-cu.github.io/OTDspec/#Occasion> ;
+                                                            rdfs:comment "Traditional dances are often related with specific occasion. This property connects a dance to the related performance occasion."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#performanceSeason
+<https://dkalita-cu.github.io/OTDspec/#performanceSeason> rdf:type owl:ObjectProperty ,
+                                                                   owl:FunctionalProperty ;
+                                                          rdfs:domain <https://dkalita-cu.github.io/OTDspec/#Dance> ;
+                                                          rdfs:range <https://dkalita-cu.github.io/OTDspec/#Season> ;
+                                                          rdfs:comment "Traditional dances are performed in various seasons of the year like spring, autumn, winter etc. This property connects a dance to the specific season when it is usually performed."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#prayersOfferredTo
+<https://dkalita-cu.github.io/OTDspec/#prayersOfferredTo> rdf:type owl:ObjectProperty ;
+                                                          rdfs:domain _:genid9 ;
+                                                          rdfs:range <https://dkalita-cu.github.io/OTDspec/#God> ;
+                                                          rdfs:comment "In some traditional dances related to some religious occasion, where prayer is offered to specific God. This property connects a dance to the God to whom prayer is made."@en .
+
+_:genid9 rdf:type owl:Restriction ;
+          owl:onProperty <https://dkalita-cu.github.io/OTDspec/#performanceOccasion> ;
+          owl:someValuesFrom <https://dkalita-cu.github.io/OTDspec/#ReligiousFestival> .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://dkalita-cu.github.io/OTDspec/#prayersOfferredTo> ;
+   owl:annotatedProperty rdfs:domain ;
+   owl:annotatedTarget _:genid9 ;
+   rdfs:comment "When the Dance is perdormed on some religious festivals, often in those dances prayers are offered to some God by various comminities."@en
+ ] .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#relatedCommunity
+<https://dkalita-cu.github.io/OTDspec/#relatedCommunity> rdf:type owl:ObjectProperty ,
+                                                                  owl:FunctionalProperty ;
+                                                         rdfs:domain <https://dkalita-cu.github.io/OTDspec/#Dance> ;
+                                                         rdfs:range <https://dkalita-cu.github.io/OTDspec/#Community> ;
+                                                         rdfs:comment "Traditional dances are related to different tribes and communites. This property connects a dance to its related community."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#replicates
+<https://dkalita-cu.github.io/OTDspec/#replicates> rdf:type owl:ObjectProperty ;
+                                                   rdfs:domain <https://dkalita-cu.github.io/OTDspec/#ReplicaTool> ;
+                                                   rdfs:range <https://dkalita-cu.github.io/OTDspec/#ReplicaItems> ;
+                                                   rdfs:comment "Some dance instruments used in traditional dances uses some tools that replictes some natural items/objects. This property connects such a tool to the natural objects which it replicates."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#requiredCostume
+<https://dkalita-cu.github.io/OTDspec/#requiredCostume> rdf:type owl:ObjectProperty ;
+                                                        rdfs:domain <https://dkalita-cu.github.io/OTDspec/#Dance> ;
+                                                        rdfs:range <https://dkalita-cu.github.io/OTDspec/#Costume> ;
+                                                        rdfs:comment "Traditional dances require specific type of costumes. Property connects dances to its required costumes."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#requiredDanceInstruments
+<https://dkalita-cu.github.io/OTDspec/#requiredDanceInstruments> rdf:type owl:ObjectProperty ;
+                                                                 rdfs:domain <https://dkalita-cu.github.io/OTDspec/#Dance> ;
+                                                                 rdfs:range <https://dkalita-cu.github.io/OTDspec/#Dance_instruments> ;
+                                                                 rdfs:comment "Property that connects a Dance to the different dances instruments required for a specific dance."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#requiredMusicalInstruments
+<https://dkalita-cu.github.io/OTDspec/#requiredMusicalInstruments> rdf:type owl:ObjectProperty ;
+                                                                   rdfs:domain <https://dkalita-cu.github.io/OTDspec/#Dance> ;
+                                                                   rdfs:range <https://dkalita-cu.github.io/OTDspec/#Musical_instruments> ;
+                                                                   rdfs:comment "Property that connects a Dance to the specific musical instruments used for  specific dance."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#requiredOrnaments
+<https://dkalita-cu.github.io/OTDspec/#requiredOrnaments> rdf:type owl:ObjectProperty ;
+                                                          rdfs:domain <https://dkalita-cu.github.io/OTDspec/#Dance> ;
+                                                          rdfs:range <https://dkalita-cu.github.io/OTDspec/#Ornaments> ;
+                                                          rdfs:comment "Property that connects a dance to the specific ornaments worn during the performance of a specific traditional dance."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#requiredSong
+<https://dkalita-cu.github.io/OTDspec/#requiredSong> rdf:type owl:ObjectProperty ,
+                                                              owl:FunctionalProperty ;
+                                                     rdfs:domain <https://dkalita-cu.github.io/OTDspec/#Dance> ;
+                                                     rdfs:range <https://dkalita-cu.github.io/OTDspec/#Songs> ;
+                                                     rdfs:comment "Property that connects a Dance to the specific song sang during the performance of a specific dance."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#yarnUsed
+<https://dkalita-cu.github.io/OTDspec/#yarnUsed> rdf:type owl:ObjectProperty ;
+                                                 rdfs:domain <https://dkalita-cu.github.io/OTDspec/#Costume> ;
+                                                 rdfs:range <https://dkalita-cu.github.io/OTDspec/#Yarn> ;
+                                                 rdfs:comment "Traditional dance costumes are often prepared following traditional methods. This property connects a Costume to the specific type of yarn used in preparation of that costume."@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://dkalita-cu.github.io/OTDspec/#breadth
+<https://dkalita-cu.github.io/OTDspec/#breadth> rdf:type owl:DatatypeProperty ;
+                                                rdfs:subPropertyOf <https://dkalita-cu.github.io/OTDspec/#hasSize> ;
+                                                rdfs:comment ""@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#diameter
+<https://dkalita-cu.github.io/OTDspec/#diameter> rdf:type owl:DatatypeProperty ;
+                                                 rdfs:subPropertyOf <https://dkalita-cu.github.io/OTDspec/#hasSize> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#genericUsage
+<https://dkalita-cu.github.io/OTDspec/#genericUsage> rdf:type owl:DatatypeProperty ;
+                                                     rdfs:domain <https://dkalita-cu.github.io/OTDspec/#Dance_instruments> ;
+                                                     rdfs:range xsd:string ;
+                                                     rdfs:comment "Different day to day items are used as dance instrument in the performance of traditional dances, e.g: Like traditional dances related to agricultural activity sees the use of agricultural tools as a dance instrument. This property represents the generic usage of such tools."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#hasColour
+<https://dkalita-cu.github.io/OTDspec/#hasColour> rdf:type owl:DatatypeProperty ;
+                                                  rdfs:domain [ rdf:type owl:Class ;
+                                                                owl:unionOf ( <https://dkalita-cu.github.io/OTDspec/#Costume>
+                                                                              <https://dkalita-cu.github.io/OTDspec/#Ornaments>
+                                                                            )
+                                                              ] ;
+                                                  rdfs:range rdfs:Literal ;
+                                                  rdfs:comment "Traditional dance costumes, ornaments have specific colours related to a specific dance. This property is used to represent the colour of such items."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#hasLyrics
+<https://dkalita-cu.github.io/OTDspec/#hasLyrics> rdf:type owl:DatatypeProperty ;
+                                                  rdfs:domain <https://dkalita-cu.github.io/OTDspec/#Songs> ;
+                                                  rdfs:range xsd:string ;
+                                                  rdfs:comment "This property is used to represent the lyrics of songs used in specific dances performances"@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#hasName
+<https://dkalita-cu.github.io/OTDspec/#hasName> rdf:type owl:DatatypeProperty ;
+                                                rdfs:domain <http://xmlns.com/foaf/0.1/Person> ;
+                                                rdfs:range xsd:string .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#hasRepresentationAs
+<https://dkalita-cu.github.io/OTDspec/#hasRepresentationAs> rdf:type owl:DatatypeProperty ;
+                                                            rdfs:range xsd:anyURI ;
+                                                            rdfs:comment "Property to connect an Image URI of its related domains"@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#hasSize
+<https://dkalita-cu.github.io/OTDspec/#hasSize> rdf:type owl:DatatypeProperty ;
+                                                rdfs:subPropertyOf owl:topDataProperty ;
+                                                rdfs:domain [ rdf:type owl:Class ;
+                                                              owl:unionOf ( <https://dkalita-cu.github.io/OTDspec/#Costume>
+                                                                            <https://dkalita-cu.github.io/OTDspec/#Instruments>
+                                                                          )
+                                                            ] ;
+                                                rdfs:range rdfs:Literal ;
+                                                rdfs:comment "Dance intruments, musical instruments, clothes might have specific sizes. This property is used to represent sizes. For example a  Drum has Length and Radius of Faces."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#length
+<https://dkalita-cu.github.io/OTDspec/#length> rdf:type owl:DatatypeProperty ;
+                                               rdfs:subPropertyOf <https://dkalita-cu.github.io/OTDspec/#hasSize> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#mukhdaOftheSong
+<https://dkalita-cu.github.io/OTDspec/#mukhdaOftheSong> rdf:type owl:DatatypeProperty ;
+                                                        rdfs:domain <https://dkalita-cu.github.io/OTDspec/#Songs> ;
+                                                        rdfs:range xsd:string .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#wornAt
+<https://dkalita-cu.github.io/OTDspec/#wornAt> rdf:type owl:DatatypeProperty ;
+                                               rdfs:domain [ rdf:type owl:Class ;
+                                                             owl:unionOf ( <https://dkalita-cu.github.io/OTDspec/#Costume>
+                                                                           <https://dkalita-cu.github.io/OTDspec/#Ornaments>
+                                                                         )
+                                                           ] ;
+                                               rdfs:range rdfs:Literal ;
+                                               rdfs:comment "The perticipants in traditional dances wear different clothes. This property connects the clothes to the body part where they are worn."@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://xmlns.com/foaf/0.1/Person
+<http://xmlns.com/foaf/0.1/Person> rdf:type owl:Class .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Aerophones
+<https://dkalita-cu.github.io/OTDspec/#Aerophones> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#Musical_instruments> ;
+                                                   rdfs:comment "produce sound by vibrating columns of air eg Basuri"^^rdfs:Literal .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#AgrianOccasion
+<https://dkalita-cu.github.io/OTDspec/#AgrianOccasion> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#Occasion> ;
+                                                       owl:disjointWith <https://dkalita-cu.github.io/OTDspec/#FamilyOccasion> ,
+                                                                        <https://dkalita-cu.github.io/OTDspec/#FestiveOccasion> ;
+                                                       rdfs:comment "Occasions related to agricultural process."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#AgriculturalTool
+<https://dkalita-cu.github.io/OTDspec/#AgriculturalTool> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#Dance_instruments> ;
+                                                         rdfs:comment "Tools which are used in agricultural activities"@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Animal
+<https://dkalita-cu.github.io/OTDspec/#Animal> rdf:type owl:Class ;
+                                               rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#ReplicaItems> ;
+                                               rdfs:comment "Class for replica item that represents an animal."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#AnimalPart
+<https://dkalita-cu.github.io/OTDspec/#AnimalPart> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#Materials> ;
+                                                   owl:disjointWith <https://dkalita-cu.github.io/OTDspec/#BirdPart> ,
+                                                                    <https://dkalita-cu.github.io/OTDspec/#PlantPart> ,
+                                                                    <https://dkalita-cu.github.io/OTDspec/#Soil> ;
+                                                   rdfs:comment "Class to represent any type of material which is derived of animal, especially different animal parts are used to make traditional war or musical instruments. This class includes those parts that come from animal."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Anklet
+<https://dkalita-cu.github.io/OTDspec/#Anklet> rdf:type owl:Class ;
+                                               rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#Ornaments> ;
+                                               owl:disjointWith <https://dkalita-cu.github.io/OTDspec/#Bracelet> ,
+                                                                <https://dkalita-cu.github.io/OTDspec/#Earings> ,
+                                                                <https://dkalita-cu.github.io/OTDspec/#NoseRing> ;
+                                               rdfs:comment "Ornaments worn at the ankle of foot."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Arrow
+<https://dkalita-cu.github.io/OTDspec/#Arrow> rdf:type owl:Class ;
+                                              rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#WarTool> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Bird
+<https://dkalita-cu.github.io/OTDspec/#Bird> rdf:type owl:Class ;
+                                             rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#ReplicaItems> ;
+                                             rdfs:comment "Class for replica items that represents a bird."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#BirdPart
+<https://dkalita-cu.github.io/OTDspec/#BirdPart> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#Materials> ;
+                                                 owl:disjointWith <https://dkalita-cu.github.io/OTDspec/#PlantPart> ,
+                                                                  <https://dkalita-cu.github.io/OTDspec/#Soil> ;
+                                                 rdfs:comment "Class to represent instruments material which are got from Birds."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#BlouseType
+<https://dkalita-cu.github.io/OTDspec/#BlouseType> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#Costume> ;
+                                                   rdfs:comment "Dress type usually worn in upper body part covering the breast area of women"@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Bow
+<https://dkalita-cu.github.io/OTDspec/#Bow> rdf:type owl:Class ;
+                                            rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#WarTool> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#BowlTypeSingleSided
+<https://dkalita-cu.github.io/OTDspec/#BowlTypeSingleSided> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#Membranophones> ;
+                                                            rdfs:comment "Membranophone shaed as bowl with membrane in one side."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#BowlTypeSingleSidedLarge
+<https://dkalita-cu.github.io/OTDspec/#BowlTypeSingleSidedLarge> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#Membranophones> ;
+                                                                 rdfs:comment "Bowl shaped membranophone larger in size with a membrane in one side, usually played by placing the instrument on ground or some frame."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Bracelet
+<https://dkalita-cu.github.io/OTDspec/#Bracelet> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#Ornaments> ;
+                                                 owl:disjointWith <https://dkalita-cu.github.io/OTDspec/#Earings> ,
+                                                                  <https://dkalita-cu.github.io/OTDspec/#NoseRing> ;
+                                                 rdfs:comment "Ornaments worn at the ankle of hand."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Cannon
+<https://dkalita-cu.github.io/OTDspec/#Cannon> rdf:type owl:Class ;
+                                               rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#WarTool> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Chordophones
+<https://dkalita-cu.github.io/OTDspec/#Chordophones> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#Musical_instruments> ;
+                                                     rdfs:comment "string instruments like dotara"^^rdfs:Literal .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Community
+<https://dkalita-cu.github.io/OTDspec/#Community> rdf:type owl:Class ;
+                                                  rdfs:comment "Class to represent diferent tribes and communities."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Costume
+<https://dkalita-cu.github.io/OTDspec/#Costume> rdf:type owl:Class ;
+                                                rdfs:comment "Class for Dresses worn at various Trditional Dance prformances"@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#CostumeDesignLanguage
+<https://dkalita-cu.github.io/OTDspec/#CostumeDesignLanguage> rdf:type owl:Class ;
+                                                              rdfs:comment "Class to define the design pattern of Dresses  like the design pattern is floral or checked, what is the weaving style, what type of yarn is used to prepare the dress etc."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Country
+<https://dkalita-cu.github.io/OTDspec/#Country> rdf:type owl:Class ;
+                                                rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#GeographicalLocation> ;
+                                                rdfs:comment "Represents a country."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Cultivating
+<https://dkalita-cu.github.io/OTDspec/#Cultivating> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#AgrianOccasion> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Dance
+<https://dkalita-cu.github.io/OTDspec/#Dance> rdf:type owl:Class ;
+                                              rdfs:comment "Class for dance."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Dance_instruments
+<https://dkalita-cu.github.io/OTDspec/#Dance_instruments> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#Instruments> ;
+                                                          owl:disjointWith <https://dkalita-cu.github.io/OTDspec/#Musical_instruments> ;
+                                                          rdfs:comment "Instruments used as a dance tool" .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#DesignPattern
+<https://dkalita-cu.github.io/OTDspec/#DesignPattern> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#CostumeDesignLanguage> ;
+                                                      rdfs:comment "Class to represent different design patterns of traditional dreses. For example Floral print can be a design pattern of dress."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#DoubleChorded
+<https://dkalita-cu.github.io/OTDspec/#DoubleChorded> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#Chordophones> ;
+                                                      rdfs:comment "String instruments that have two strings vibrting which sound is produced"@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#DoubleSidedLongDrum
+<https://dkalita-cu.github.io/OTDspec/#DoubleSidedLongDrum> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#Membranophones> ;
+                                                            rdfs:comment "Membranophone longer sized tunnel shaped with membranes on two sides."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#DoubleSidedShortDrum
+<https://dkalita-cu.github.io/OTDspec/#DoubleSidedShortDrum> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#Membranophones> ;
+                                                             rdfs:comment "Membranophone short sized tunnel shaped with membrane on two sides."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Drummer
+<https://dkalita-cu.github.io/OTDspec/#Drummer> rdf:type owl:Class ;
+                                                rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#Musician> ;
+                                                rdfs:comment "Class for persons playing drums."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Earings
+<https://dkalita-cu.github.io/OTDspec/#Earings> rdf:type owl:Class ;
+                                                rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#Ornaments> ;
+                                                owl:disjointWith <https://dkalita-cu.github.io/OTDspec/#NoseRing> ;
+                                                rdfs:comment "Ornaments worn at ear."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#FamilyOccasion
+<https://dkalita-cu.github.io/OTDspec/#FamilyOccasion> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#Occasion> ;
+                                                       owl:disjointWith <https://dkalita-cu.github.io/OTDspec/#FestiveOccasion> ;
+                                                       rdfs:comment "Class for different family occasions like marriage, child birth etc."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#FemaleGroupDance
+<https://dkalita-cu.github.io/OTDspec/#FemaleGroupDance> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#TraditionalDance> ;
+                                                         rdfs:comment "Class for traditional dances which are performed as a group and all members of the group are Female"@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#FestiveOccasion
+<https://dkalita-cu.github.io/OTDspec/#FestiveOccasion> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#Occasion> ;
+                                                        rdfs:comment "Festive occasions of different community and tribes."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#FishingTool
+<https://dkalita-cu.github.io/OTDspec/#FishingTool> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#Dance_instruments> ;
+                                                    rdfs:comment "Tools which are used for fishing purpose."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Flutist
+<https://dkalita-cu.github.io/OTDspec/#Flutist> rdf:type owl:Class ;
+                                                rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#Musician> ;
+                                                rdfs:comment "Class for persons playing flute."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Gender
+<https://dkalita-cu.github.io/OTDspec/#Gender> rdf:type owl:Class ;
+                                               rdfs:comment "Class for Human Genders"@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#GeographicalLocation
+<https://dkalita-cu.github.io/OTDspec/#GeographicalLocation> rdf:type owl:Class ;
+                                                             rdfs:comment "Class to represent the location of a particular traditional dance where it is practiced."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#God
+<https://dkalita-cu.github.io/OTDspec/#God> rdf:type owl:Class ;
+                                            rdfs:comment "Various Traditional Dances rare of religius nature and in such performances prayers are offered to Gods. This class is for Gods"@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Gun
+<https://dkalita-cu.github.io/OTDspec/#Gun> rdf:type owl:Class ;
+                                            rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#WarTool> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Harvesting
+<https://dkalita-cu.github.io/OTDspec/#Harvesting> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#AgrianOccasion> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Headgear
+<https://dkalita-cu.github.io/OTDspec/#Headgear> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#Costume> ;
+                                                 rdfs:comment "Dress type worn covering the head or the forehead like a cap. Usually worn by both man and woman."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#HuntingTool
+<https://dkalita-cu.github.io/OTDspec/#HuntingTool> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#Dance_instruments> ;
+                                                    rdfs:comment "Tools which are used for hunting."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Idiophones
+<https://dkalita-cu.github.io/OTDspec/#Idiophones> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#Musical_instruments> ;
+                                                   rdfs:comment "Produce sound by vibrating themselves generally non drum percussian instruments"^^rdfs:Literal .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#IndividualFemaleDance
+<https://dkalita-cu.github.io/OTDspec/#IndividualFemaleDance> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#TraditionalDance> ;
+                                                              rdfs:comment "Class for traditional dances which are performed by only a single individual dancer whose gender is female"@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#IndividualMaleDance
+<https://dkalita-cu.github.io/OTDspec/#IndividualMaleDance> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#TraditionalDance> ;
+                                                            rdfs:comment "Class for traditional dances which are performed by only a single individual dancer whose gender is Male"@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Instruments
+<https://dkalita-cu.github.io/OTDspec/#Instruments> rdf:type owl:Class ;
+                                                    rdfs:comment "Instruments implies to specific tools used in the dance performance. Musical instruments and instruments used as dance props are covered under this class." .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#MaleGroupDance
+<https://dkalita-cu.github.io/OTDspec/#MaleGroupDance> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#TraditionalDance> ;
+                                                       rdfs:comment "Class for traditional dances which are performed as a group and all members of the group are Male"@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Materials
+<https://dkalita-cu.github.io/OTDspec/#Materials> rdf:type owl:Class ;
+                                                  rdfs:comment "The traditional dances requires the use of different type of musical instruments. Also in the dance performances there are various tools from day to day life  which are used as dance props. This class includes the name of such materials by which the instruments are made off."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Membranophones
+<https://dkalita-cu.github.io/OTDspec/#Membranophones> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#Musical_instruments> ;
+                                                       rdfs:comment "produce sound by a vibrating membrane eg drums"^^rdfs:Literal .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Metal
+<https://dkalita-cu.github.io/OTDspec/#Metal> rdf:type owl:Class ;
+                                              rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#Materials> ;
+                                              owl:disjointWith <https://dkalita-cu.github.io/OTDspec/#Soil> ;
+                                              rdfs:comment "Class for different metalic objects."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#MufflerType
+<https://dkalita-cu.github.io/OTDspec/#MufflerType> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#Costume> ;
+                                                    rdfs:comment "Dress type usually worn covering the neck area. Worn by both man and woman"@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Musical_instruments
+<https://dkalita-cu.github.io/OTDspec/#Musical_instruments> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#Instruments> ;
+                                                            rdfs:comment "Instruments used in the music of the dance performance" .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Musician
+<https://dkalita-cu.github.io/OTDspec/#Musician> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#Role> ;
+                                                 rdfs:comment "Class for participants having duty with music."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#NaturalYarn
+<https://dkalita-cu.github.io/OTDspec/#NaturalYarn> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#Yarn> ;
+                                                    rdfs:comment "Yarn that is found naturally."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Necklace
+<https://dkalita-cu.github.io/OTDspec/#Necklace> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#Ornaments> ;
+                                                 rdfs:comment "Class to represent ornaments that are worn at neck."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#NoseRing
+<https://dkalita-cu.github.io/OTDspec/#NoseRing> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#Ornaments> ;
+                                                 rdfs:comment "Ornaments worn at Nose."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Occasion
+<https://dkalita-cu.github.io/OTDspec/#Occasion> rdf:type owl:Class ;
+                                                 rdfs:comment "Class to represent the different occasions to which specific traditional dances are related to."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Ornaments
+<https://dkalita-cu.github.io/OTDspec/#Ornaments> rdf:type owl:Class ;
+                                                  rdfs:comment "This implies to specific ornamental items."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Perticipants
+<https://dkalita-cu.github.io/OTDspec/#Perticipants> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://xmlns.com/foaf/0.1/Person> ;
+                                                     rdfs:comment """Class person s a union of class male and female.
+
+Represents agent."""@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#PlantPart
+<https://dkalita-cu.github.io/OTDspec/#PlantPart> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#Materials> ;
+                                                  owl:disjointWith <https://dkalita-cu.github.io/OTDspec/#Soil> ;
+                                                  rdfs:comment "Class to define any type of material used for instrument making which is derived from Plants."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#ReligiousFestival
+<https://dkalita-cu.github.io/OTDspec/#ReligiousFestival> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#FestiveOccasion> ;
+                                                          owl:disjointWith <https://dkalita-cu.github.io/OTDspec/#SeasonalFestival> ;
+                                                          rdfs:comment "Festival of religious sentiments when prayers are made to satisfy certain Gods."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#ReplicaItems
+<https://dkalita-cu.github.io/OTDspec/#ReplicaItems> rdf:type owl:Class ;
+                                                     rdfs:comment "In traditional Dances , dancesr uses different types of items generaly handmade which are some replication of natural entities like an animal or a bird etc. For example in the Maselenka dance of Rabhas, the dances take a special handmade wooden frame that represents the bird Maslenka. This class includes the real name of the items used as replica items."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#ReplicaTool
+<https://dkalita-cu.github.io/OTDspec/#ReplicaTool> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#Dance_instruments> ;
+                                                    rdfs:comment "Tools designed to replicate some animal, object etc. For example in the Hanaghora dances of Rabha community, they uses a woden made horse in hand to replicate a Horse."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Role
+<https://dkalita-cu.github.io/OTDspec/#Role> rdf:type owl:Class ;
+                                             rdfs:comment "Class for different roles of different participants in a traditional dance."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Season
+<https://dkalita-cu.github.io/OTDspec/#Season> rdf:type owl:Class ;
+                                               rdfs:comment "Class for different seasons of the year."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#SeasonalFestival
+<https://dkalita-cu.github.io/OTDspec/#SeasonalFestival> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#FestiveOccasion> ;
+                                                         rdfs:comment "Festival related to calender year. For example festivals like new calender year, starting of  season, monsoon etc."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Shield
+<https://dkalita-cu.github.io/OTDspec/#Shield> rdf:type owl:Class ;
+                                               rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#WarTool> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#ShirtType
+<https://dkalita-cu.github.io/OTDspec/#ShirtType> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#Costume> ;
+                                                  rdfs:comment "a dress type worn in covering the upper body, usually have sleeves and buttons. Generally worn by man"@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Singer
+<https://dkalita-cu.github.io/OTDspec/#Singer> rdf:type owl:Class ;
+                                               rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#Role> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#SingleChorded
+<https://dkalita-cu.github.io/OTDspec/#SingleChorded> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#Chordophones> ;
+                                                      rdfs:comment "String instruments that have a single string vibrating which sound is produced"@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#SingleSidedLongDrum
+<https://dkalita-cu.github.io/OTDspec/#SingleSidedLongDrum> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#Membranophones> ;
+                                                            rdfs:comment "Membranophone longer tunnel shaped with membrane n one side."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#SingleSidedShortDrum
+<https://dkalita-cu.github.io/OTDspec/#SingleSidedShortDrum> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#Membranophones> ;
+                                                             rdfs:comment "Membranophone short tunnel shaped with membrane on one side."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Soil
+<https://dkalita-cu.github.io/OTDspec/#Soil> rdf:type owl:Class ;
+                                             rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#Materials> ;
+                                             rdfs:comment "Class for soil like materials."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Songs
+<https://dkalita-cu.github.io/OTDspec/#Songs> rdf:type owl:Class ;
+                                              rdfs:comment "Class for different songs used in traditional dances. Usually the mukhra part of the song can be written here."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Spear
+<https://dkalita-cu.github.io/OTDspec/#Spear> rdf:type owl:Class ;
+                                              rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#WarTool> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#State
+<https://dkalita-cu.github.io/OTDspec/#State> rdf:type owl:Class ;
+                                              rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#GeographicalLocation> ;
+                                              rdfs:comment "Represents a state inside a country."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#SuperNaturalEntity
+<https://dkalita-cu.github.io/OTDspec/#SuperNaturalEntity> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#ReplicaItems> ;
+                                                           rdfs:comment "Class for replica items that represents some super natural items like a ghost etc."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Sword
+<https://dkalita-cu.github.io/OTDspec/#Sword> rdf:type owl:Class ;
+                                              rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#WarTool> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#SyntheticYarn
+<https://dkalita-cu.github.io/OTDspec/#SyntheticYarn> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#Yarn> ;
+                                                      rdfs:comment "Yarn that is produced artificially."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#TraditionalDance
+<https://dkalita-cu.github.io/OTDspec/#TraditionalDance> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#Dance> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#TripleChorded
+<https://dkalita-cu.github.io/OTDspec/#TripleChorded> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#Chordophones> ;
+                                                      rdfs:comment "String instruments that have three connected strings"@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#TurbanType
+<https://dkalita-cu.github.io/OTDspec/#TurbanType> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#Costume> ;
+                                                   rdfs:comment "a dress type of long lengt material usually worn covering the head"@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#UnisexGroupDance
+<https://dkalita-cu.github.io/OTDspec/#UnisexGroupDance> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#TraditionalDance> ;
+                                                         rdfs:comment "Class for traditional dances which are performed as a group and all members of the group should be Male and Female"@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Utensil
+<https://dkalita-cu.github.io/OTDspec/#Utensil> rdf:type owl:Class ;
+                                                rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#Dance_instruments> ;
+                                                rdfs:comment "Different items and instruments that are used in cooking process"@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#VeilType
+<https://dkalita-cu.github.io/OTDspec/#VeilType> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#Costume> ;
+                                                 rdfs:comment "a dress type worn covering the face. Usually worn by woman"@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Waistcloth
+<https://dkalita-cu.github.io/OTDspec/#Waistcloth> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#Costume> ;
+                                                   rdfs:comment "a piece of cloth teid around the waist."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Waistlet
+<https://dkalita-cu.github.io/OTDspec/#Waistlet> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#Ornaments> ;
+                                                 rdfs:comment "Ornaments worn around the waist. Note: There is a different class for cloths worn around the waist."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#War
+<https://dkalita-cu.github.io/OTDspec/#War> rdf:type owl:Class ;
+                                            rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#Occasion> ;
+                                            rdfs:comment "Some communities celebrate some festivals relating to different wars."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#WarTool
+<https://dkalita-cu.github.io/OTDspec/#WarTool> rdf:type owl:Class ;
+                                                rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#Dance_instruments> ;
+                                                rdfs:comment "Weaponery used in Wars."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#WeavingStyle
+<https://dkalita-cu.github.io/OTDspec/#WeavingStyle> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#CostumeDesignLanguage> ;
+                                                     rdfs:comment "Class to represent different types of weaving style used to prepare certain dress."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#WrapperType
+<https://dkalita-cu.github.io/OTDspec/#WrapperType> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#Costume> ;
+                                                    rdfs:comment "any type of plain long length cloth worn by wrapping around the body."@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Yarn
+<https://dkalita-cu.github.io/OTDspec/#Yarn> rdf:type owl:Class ;
+                                             rdfs:subClassOf <https://dkalita-cu.github.io/OTDspec/#CostumeDesignLanguage> ;
+                                             rdfs:comment "Class to represent different types of yarn used to prepapre the dress."@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://dkalita-cu.github.io/OTDspec/#Abahoni
+<https://dkalita-cu.github.io/OTDspec/#Abahoni> rdf:type owl:NamedIndividual ,
+                                                         <https://dkalita-cu.github.io/OTDspec/#UnisexGroupDance> ;
+                                                <https://dkalita-cu.github.io/OTDspec/#originCountry> <https://dkalita-cu.github.io/OTDspec/#India> ;
+                                                <https://dkalita-cu.github.io/OTDspec/#originState> <https://dkalita-cu.github.io/OTDspec/#Assam> ;
+                                                <https://dkalita-cu.github.io/OTDspec/#requiredCostume> <https://dkalita-cu.github.io/OTDspec/#Kambang> ,
+                                                                                                        <https://dkalita-cu.github.io/OTDspec/#Pajar> ,
+                                                                                                        <https://dkalita-cu.github.io/OTDspec/#Patani> ,
+                                                                                                        <https://dkalita-cu.github.io/OTDspec/#Phali> ;
+                                                <https://dkalita-cu.github.io/OTDspec/#requiredDanceInstruments> <https://dkalita-cu.github.io/OTDspec/#Khuchung-Khapak> ,
+                                                                                                                 <https://dkalita-cu.github.io/OTDspec/#Thungri> ;
+                                                <https://dkalita-cu.github.io/OTDspec/#requiredMusicalInstruments> <https://dkalita-cu.github.io/OTDspec/#Daidi> ,
+                                                                                                                   <https://dkalita-cu.github.io/OTDspec/#Kara> ,
+                                                                                                                   <https://dkalita-cu.github.io/OTDspec/#Kham> ,
+                                                                                                                   <https://dkalita-cu.github.io/OTDspec/#Muk-Brangsi> ,
+                                                                                                                   <https://dkalita-cu.github.io/OTDspec/#Singa> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Assam
+<https://dkalita-cu.github.io/OTDspec/#Assam> rdf:type owl:NamedIndividual ,
+                                                       <https://dkalita-cu.github.io/OTDspec/#State> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Badung-duppa
+<https://dkalita-cu.github.io/OTDspec/#Badung-duppa> rdf:type owl:NamedIndividual ,
+                                                              <https://dkalita-cu.github.io/OTDspec/#TripleChorded> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Bak-Chali
+<https://dkalita-cu.github.io/OTDspec/#Bak-Chali> rdf:type owl:NamedIndividual ,
+                                                           <https://dkalita-cu.github.io/OTDspec/#ShirtType> ;
+                                                  <https://dkalita-cu.github.io/OTDspec/#associatedGender> <https://dkalita-cu.github.io/OTDspec/#Male> ;
+                                                  <https://dkalita-cu.github.io/OTDspec/#hasDesignPattern> <https://dkalita-cu.github.io/OTDspec/#Checked> ;
+                                                  <https://dkalita-cu.github.io/OTDspec/#hasColour> "Green"@en ,
+                                                                                                    "Red"@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Bamboo
+<https://dkalita-cu.github.io/OTDspec/#Bamboo> rdf:type owl:NamedIndividual ,
+                                                        <https://dkalita-cu.github.io/OTDspec/#PlantPart> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Bell_Metal
+<https://dkalita-cu.github.io/OTDspec/#Bell_Metal> rdf:type owl:NamedIndividual ,
+                                                            <https://dkalita-cu.github.io/OTDspec/#Metal> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Bird_Maslenka
+<https://dkalita-cu.github.io/OTDspec/#Bird_Maslenka> rdf:type owl:NamedIndividual ,
+                                                               <https://dkalita-cu.github.io/OTDspec/#Bird> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Bohurongi
+<https://dkalita-cu.github.io/OTDspec/#Bohurongi> rdf:type owl:NamedIndividual ,
+                                                           <https://dkalita-cu.github.io/OTDspec/#FemaleGroupDance> ;
+                                                  <https://dkalita-cu.github.io/OTDspec/#originCountry> <https://dkalita-cu.github.io/OTDspec/#India> ;
+                                                  <https://dkalita-cu.github.io/OTDspec/#originState> <https://dkalita-cu.github.io/OTDspec/#Assam> ;
+                                                  <https://dkalita-cu.github.io/OTDspec/#performanceOccasion> <https://dkalita-cu.github.io/OTDspec/#Religious_Social_Gatherings> ;
+                                                  <https://dkalita-cu.github.io/OTDspec/#relatedCommunity> <https://dkalita-cu.github.io/OTDspec/#Rabha> ;
+                                                  <https://dkalita-cu.github.io/OTDspec/#requiredCostume> <https://dkalita-cu.github.io/OTDspec/#Khapang> ,
+                                                                                                          <https://dkalita-cu.github.io/OTDspec/#Patani> ,
+                                                                                                          <https://dkalita-cu.github.io/OTDspec/#Phali> ;
+                                                  <https://dkalita-cu.github.io/OTDspec/#requiredDanceInstruments> <https://dkalita-cu.github.io/OTDspec/#Jakoi> ,
+                                                                                                                   <https://dkalita-cu.github.io/OTDspec/#Lunkhi> ;
+                                                  <https://dkalita-cu.github.io/OTDspec/#requiredMusicalInstruments> <https://dkalita-cu.github.io/OTDspec/#Kham> ,
+                                                                                                                     <https://dkalita-cu.github.io/OTDspec/#Muk-Brangsi> ,
+                                                                                                                     <https://dkalita-cu.github.io/OTDspec/#Tal> ,
+                                                                                                                     <https://dkalita-cu.github.io/OTDspec/#Thorka> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Brass
+<https://dkalita-cu.github.io/OTDspec/#Brass> rdf:type owl:NamedIndividual ,
+                                                       <https://dkalita-cu.github.io/OTDspec/#Metal> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Buffalo_horn
+<https://dkalita-cu.github.io/OTDspec/#Buffalo_horn> rdf:type owl:NamedIndividual ,
+                                                              <https://dkalita-cu.github.io/OTDspec/#AnimalPart> ;
+                                                     <https://dkalita-cu.github.io/OTDspec/#isUsedToMake> <https://dkalita-cu.github.io/OTDspec/#Singa> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Checked
+<https://dkalita-cu.github.io/OTDspec/#Checked> rdf:type owl:NamedIndividual ,
+                                                         <https://dkalita-cu.github.io/OTDspec/#DesignPattern> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Childbirth
+<https://dkalita-cu.github.io/OTDspec/#Childbirth> rdf:type owl:NamedIndividual ,
+                                                            <https://dkalita-cu.github.io/OTDspec/#FamilyOccasion> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Da
+<https://dkalita-cu.github.io/OTDspec/#Da> rdf:type owl:NamedIndividual ,
+                                                    <https://dkalita-cu.github.io/OTDspec/#AgriculturalTool> ;
+                                           <https://dkalita-cu.github.io/OTDspec/#associatedGender> <https://dkalita-cu.github.io/OTDspec/#Male> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Daidi
+<https://dkalita-cu.github.io/OTDspec/#Daidi> rdf:type owl:NamedIndividual ,
+                                                       <https://dkalita-cu.github.io/OTDspec/#Idiophones> ;
+                                              <https://dkalita-cu.github.io/OTDspec/#isMadeOf> <https://dkalita-cu.github.io/OTDspec/#Bell_Metal> ;
+                                              <https://dkalita-cu.github.io/OTDspec/#diameter> "6 to 9 inches"@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Fakranti
+<https://dkalita-cu.github.io/OTDspec/#Fakranti> rdf:type owl:NamedIndividual ,
+                                                          <https://dkalita-cu.github.io/OTDspec/#UnisexGroupDance> ;
+                                                 <https://dkalita-cu.github.io/OTDspec/#originCountry> <https://dkalita-cu.github.io/OTDspec/#India> ;
+                                                 <https://dkalita-cu.github.io/OTDspec/#originState> <https://dkalita-cu.github.io/OTDspec/#Assam> ;
+                                                 <https://dkalita-cu.github.io/OTDspec/#performanceOccasion> <https://dkalita-cu.github.io/OTDspec/#Funeral> ;
+                                                 <https://dkalita-cu.github.io/OTDspec/#relatedCommunity> <https://dkalita-cu.github.io/OTDspec/#Rabha> ;
+                                                 <https://dkalita-cu.github.io/OTDspec/#requiredCostume> <https://dkalita-cu.github.io/OTDspec/#Kambang> ,
+                                                                                                         <https://dkalita-cu.github.io/OTDspec/#Pajal> ,
+                                                                                                         <https://dkalita-cu.github.io/OTDspec/#Pajar> ,
+                                                                                                         <https://dkalita-cu.github.io/OTDspec/#Patani> ;
+                                                 <https://dkalita-cu.github.io/OTDspec/#requiredDanceInstruments> <https://dkalita-cu.github.io/OTDspec/#Khuchung-Khapak> ,
+                                                                                                                  <https://dkalita-cu.github.io/OTDspec/#Maslenka> ,
+                                                                                                                  <https://dkalita-cu.github.io/OTDspec/#Thungri> ;
+                                                 <https://dkalita-cu.github.io/OTDspec/#requiredMusicalInstruments> <https://dkalita-cu.github.io/OTDspec/#Daidi> ,
+                                                                                                                    <https://dkalita-cu.github.io/OTDspec/#Kham> ,
+                                                                                                                    <https://dkalita-cu.github.io/OTDspec/#Muk-Brangsi> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Female
+<https://dkalita-cu.github.io/OTDspec/#Female> rdf:type owl:NamedIndividual ,
+                                                        <https://dkalita-cu.github.io/OTDspec/#Gender> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Floral
+<https://dkalita-cu.github.io/OTDspec/#Floral> rdf:type owl:NamedIndividual ,
+                                                        <https://dkalita-cu.github.io/OTDspec/#DesignPattern> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Funeral
+<https://dkalita-cu.github.io/OTDspec/#Funeral> rdf:type owl:NamedIndividual ,
+                                                         <https://dkalita-cu.github.io/OTDspec/#FamilyOccasion> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Gamana
+<https://dkalita-cu.github.io/OTDspec/#Gamana> rdf:type owl:NamedIndividual ,
+                                                        <https://dkalita-cu.github.io/OTDspec/#SingleChorded> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Gomari_Wood
+<https://dkalita-cu.github.io/OTDspec/#Gomari_Wood> rdf:type owl:NamedIndividual ,
+                                                             <https://dkalita-cu.github.io/OTDspec/#PlantPart> ;
+                                                    <https://dkalita-cu.github.io/OTDspec/#isUsedToMake> <https://dkalita-cu.github.io/OTDspec/#Kham> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Hamjha_Festival
+<https://dkalita-cu.github.io/OTDspec/#Hamjha_Festival> rdf:type owl:NamedIndividual ,
+                                                                 <https://dkalita-cu.github.io/OTDspec/#Cultivating> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Hamjhar
+<https://dkalita-cu.github.io/OTDspec/#Hamjhar> rdf:type owl:NamedIndividual ,
+                                                         <https://dkalita-cu.github.io/OTDspec/#UnisexGroupDance> ;
+                                                <https://dkalita-cu.github.io/OTDspec/#originCountry> <https://dkalita-cu.github.io/OTDspec/#India> ;
+                                                <https://dkalita-cu.github.io/OTDspec/#originState> <https://dkalita-cu.github.io/OTDspec/#Assam> ;
+                                                <https://dkalita-cu.github.io/OTDspec/#performanceOccasion> <https://dkalita-cu.github.io/OTDspec/#Hamjha_Festival> ;
+                                                <https://dkalita-cu.github.io/OTDspec/#relatedCommunity> <https://dkalita-cu.github.io/OTDspec/#Rabha> ;
+                                                <https://dkalita-cu.github.io/OTDspec/#requiredCostume> <https://dkalita-cu.github.io/OTDspec/#Bak-Chali> ,
+                                                                                                        <https://dkalita-cu.github.io/OTDspec/#Kambang> ,
+                                                                                                        <https://dkalita-cu.github.io/OTDspec/#Khapang> ,
+                                                                                                        <https://dkalita-cu.github.io/OTDspec/#Pajal> ,
+                                                                                                        <https://dkalita-cu.github.io/OTDspec/#Pajar> ,
+                                                                                                        <https://dkalita-cu.github.io/OTDspec/#Patani> ,
+                                                                                                        <https://dkalita-cu.github.io/OTDspec/#Rufan> ;
+                                                <https://dkalita-cu.github.io/OTDspec/#requiredDanceInstruments> <https://dkalita-cu.github.io/OTDspec/#Da> ,
+                                                                                                                 <https://dkalita-cu.github.io/OTDspec/#Kodal> ,
+                                                                                                                 <https://dkalita-cu.github.io/OTDspec/#Kuthar> ,
+                                                                                                                 <https://dkalita-cu.github.io/OTDspec/#Lunkhi> ;
+                                                <https://dkalita-cu.github.io/OTDspec/#requiredMusicalInstruments> <https://dkalita-cu.github.io/OTDspec/#Kham> ,
+                                                                                                                   <https://dkalita-cu.github.io/OTDspec/#Muk-Brangsi> ;
+                                                <https://dkalita-cu.github.io/OTDspec/#requiredOrnaments> <https://dkalita-cu.github.io/OTDspec/#Hancha> ,
+                                                                                                          <https://dkalita-cu.github.io/OTDspec/#Makring> ,
+                                                                                                          <https://dkalita-cu.github.io/OTDspec/#Nakapati> ,
+                                                                                                          <https://dkalita-cu.github.io/OTDspec/#Rubak_mala> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Hancha
+<https://dkalita-cu.github.io/OTDspec/#Hancha> rdf:type owl:NamedIndividual ,
+                                                        <https://dkalita-cu.github.io/OTDspec/#Necklace> ;
+                                               <https://dkalita-cu.github.io/OTDspec/#associatedGender> <https://dkalita-cu.github.io/OTDspec/#Female> ;
+                                               <https://dkalita-cu.github.io/OTDspec/#isMadeOf> <https://dkalita-cu.github.io/OTDspec/#Silver> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#India
+<https://dkalita-cu.github.io/OTDspec/#India> rdf:type owl:NamedIndividual ,
+                                                       <https://dkalita-cu.github.io/OTDspec/#Country> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Iron
+<https://dkalita-cu.github.io/OTDspec/#Iron> rdf:type owl:NamedIndividual ,
+                                                      <https://dkalita-cu.github.io/OTDspec/#Metal> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Ivory
+<https://dkalita-cu.github.io/OTDspec/#Ivory> rdf:type owl:NamedIndividual ,
+                                                       <https://dkalita-cu.github.io/OTDspec/#AnimalPart> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Jakoi
+<https://dkalita-cu.github.io/OTDspec/#Jakoi> rdf:type owl:NamedIndividual ,
+                                                       <https://dkalita-cu.github.io/OTDspec/#FishingTool> ;
+                                              <https://dkalita-cu.github.io/OTDspec/#associatedGender> <https://dkalita-cu.github.io/OTDspec/#Female> ;
+                                              <https://dkalita-cu.github.io/OTDspec/#isMadeOf> <https://dkalita-cu.github.io/OTDspec/#Bamboo> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Kambang
+<https://dkalita-cu.github.io/OTDspec/#Kambang> rdf:type owl:NamedIndividual ,
+                                                         <https://dkalita-cu.github.io/OTDspec/#WrapperType> ;
+                                                <https://dkalita-cu.github.io/OTDspec/#associatedGender> <https://dkalita-cu.github.io/OTDspec/#Female> ;
+                                                <https://dkalita-cu.github.io/OTDspec/#breadth> "12 inches"@en ;
+                                                <https://dkalita-cu.github.io/OTDspec/#hasColour> "Red"@en ;
+                                                <https://dkalita-cu.github.io/OTDspec/#length> "36 inches"@en ;
+                                                <https://dkalita-cu.github.io/OTDspec/#wornAt> "Breast"@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Kara
+<https://dkalita-cu.github.io/OTDspec/#Kara> rdf:type owl:NamedIndividual ,
+                                                      <https://dkalita-cu.github.io/OTDspec/#Aerophones> ;
+                                             <https://dkalita-cu.github.io/OTDspec/#isMadeOf> <https://dkalita-cu.github.io/OTDspec/#Nal_Bamboo> ;
+                                             <https://dkalita-cu.github.io/OTDspec/#length> "84 inches"@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Kham
+<https://dkalita-cu.github.io/OTDspec/#Kham> rdf:type owl:NamedIndividual ,
+                                                      <https://dkalita-cu.github.io/OTDspec/#DoubleSidedLongDrum> ;
+                                             <https://dkalita-cu.github.io/OTDspec/#diameter> "18 inches"@en ;
+                                             <https://dkalita-cu.github.io/OTDspec/#length> "54 inches"@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Khapang
+<https://dkalita-cu.github.io/OTDspec/#Khapang> rdf:type owl:NamedIndividual ,
+                                                         <https://dkalita-cu.github.io/OTDspec/#TurbanType> ;
+                                                <https://dkalita-cu.github.io/OTDspec/#associatedGender> <https://dkalita-cu.github.io/OTDspec/#Unisex> ;
+                                                <https://dkalita-cu.github.io/OTDspec/#hasDesignPattern> <https://dkalita-cu.github.io/OTDspec/#Floral> ;
+                                                <https://dkalita-cu.github.io/OTDspec/#breadth> "12 inches"@en ;
+                                                <https://dkalita-cu.github.io/OTDspec/#hasColour> "Red"@en ;
+                                                <https://dkalita-cu.github.io/OTDspec/#length> "48 inches"@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Khuchung-Khapak
+<https://dkalita-cu.github.io/OTDspec/#Khuchung-Khapak> rdf:type owl:NamedIndividual ,
+                                                                 <https://dkalita-cu.github.io/OTDspec/#Shield> ;
+                                                        <https://dkalita-cu.github.io/OTDspec/#associatedGender> <https://dkalita-cu.github.io/OTDspec/#Female> ,
+                                                                                                                 <https://dkalita-cu.github.io/OTDspec/#Male> ;
+                                                        <https://dkalita-cu.github.io/OTDspec/#diameter> "18 inches"@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Kodal
+<https://dkalita-cu.github.io/OTDspec/#Kodal> rdf:type owl:NamedIndividual ,
+                                                       <https://dkalita-cu.github.io/OTDspec/#AgriculturalTool> ;
+                                              <https://dkalita-cu.github.io/OTDspec/#isMadeOf> <https://dkalita-cu.github.io/OTDspec/#Bamboo> ,
+                                                                                               <https://dkalita-cu.github.io/OTDspec/#Iron> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Kuthar
+<https://dkalita-cu.github.io/OTDspec/#Kuthar> rdf:type owl:NamedIndividual ,
+                                                        <https://dkalita-cu.github.io/OTDspec/#AgriculturalTool> ;
+                                               <https://dkalita-cu.github.io/OTDspec/#associatedGender> <https://dkalita-cu.github.io/OTDspec/#Male> ;
+                                               <https://dkalita-cu.github.io/OTDspec/#isMadeOf> <https://dkalita-cu.github.io/OTDspec/#Iron> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Lunkhi
+<https://dkalita-cu.github.io/OTDspec/#Lunkhi> rdf:type owl:NamedIndividual ,
+                                                        <https://dkalita-cu.github.io/OTDspec/#AgriculturalTool> ;
+                                               <https://dkalita-cu.github.io/OTDspec/#associatedGender> <https://dkalita-cu.github.io/OTDspec/#Female> ;
+                                               <https://dkalita-cu.github.io/OTDspec/#isMadeOf> <https://dkalita-cu.github.io/OTDspec/#Bamboo> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Makring
+<https://dkalita-cu.github.io/OTDspec/#Makring> rdf:type owl:NamedIndividual ,
+                                                         <https://dkalita-cu.github.io/OTDspec/#Earings> ;
+                                                <https://dkalita-cu.github.io/OTDspec/#associatedGender> <https://dkalita-cu.github.io/OTDspec/#Female> ;
+                                                <https://dkalita-cu.github.io/OTDspec/#isMadeOf> <https://dkalita-cu.github.io/OTDspec/#Brass> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Male
+<https://dkalita-cu.github.io/OTDspec/#Male> rdf:type owl:NamedIndividual ,
+                                                      <https://dkalita-cu.github.io/OTDspec/#Gender> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Marriage
+<https://dkalita-cu.github.io/OTDspec/#Marriage> rdf:type owl:NamedIndividual ,
+                                                          <https://dkalita-cu.github.io/OTDspec/#FamilyOccasion> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Maslenka
+<https://dkalita-cu.github.io/OTDspec/#Maslenka> rdf:type owl:NamedIndividual ,
+                                                          <https://dkalita-cu.github.io/OTDspec/#ReplicaTool> ;
+                                                 <https://dkalita-cu.github.io/OTDspec/#associatedGender> <https://dkalita-cu.github.io/OTDspec/#Male> ;
+                                                 <https://dkalita-cu.github.io/OTDspec/#isMadeOf> <https://dkalita-cu.github.io/OTDspec/#Wood> ;
+                                                 <https://dkalita-cu.github.io/OTDspec/#replicates> <https://dkalita-cu.github.io/OTDspec/#Bird_Maslenka> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Muk-Brangsi
+<https://dkalita-cu.github.io/OTDspec/#Muk-Brangsi> rdf:type owl:NamedIndividual ,
+                                                             <https://dkalita-cu.github.io/OTDspec/#Aerophones> ;
+                                                    <https://dkalita-cu.github.io/OTDspec/#isMadeOf> <https://dkalita-cu.github.io/OTDspec/#Nal_Bamboo> ;
+                                                    <https://dkalita-cu.github.io/OTDspec/#length> "18 inches"@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Nakapati
+<https://dkalita-cu.github.io/OTDspec/#Nakapati> rdf:type owl:NamedIndividual ,
+                                                          <https://dkalita-cu.github.io/OTDspec/#NoseRing> ;
+                                                 <https://dkalita-cu.github.io/OTDspec/#associatedGender> <https://dkalita-cu.github.io/OTDspec/#Female> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Nal_Bamboo
+<https://dkalita-cu.github.io/OTDspec/#Nal_Bamboo> rdf:type owl:NamedIndividual ,
+                                                            <https://dkalita-cu.github.io/OTDspec/#PlantPart> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Pajal
+<https://dkalita-cu.github.io/OTDspec/#Pajal> rdf:type owl:NamedIndividual ,
+                                                       <https://dkalita-cu.github.io/OTDspec/#WrapperType> ;
+                                              <https://dkalita-cu.github.io/OTDspec/#associatedGender> <https://dkalita-cu.github.io/OTDspec/#Male> ;
+                                              <https://dkalita-cu.github.io/OTDspec/#breadth> "2.5 feet"@en ;
+                                              <https://dkalita-cu.github.io/OTDspec/#hasColour> "Green"@en ;
+                                              <https://dkalita-cu.github.io/OTDspec/#length> "7 feet"@en ;
+                                              <https://dkalita-cu.github.io/OTDspec/#wornAt> "waist"@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Pajar
+<https://dkalita-cu.github.io/OTDspec/#Pajar> rdf:type owl:NamedIndividual ,
+                                                       <https://dkalita-cu.github.io/OTDspec/#MufflerType> ;
+                                              <https://dkalita-cu.github.io/OTDspec/#associatedGender> <https://dkalita-cu.github.io/OTDspec/#Male> ;
+                                              <https://dkalita-cu.github.io/OTDspec/#associatedWeavingStyle> <https://dkalita-cu.github.io/OTDspec/#Plain_Weaving> ;
+                                              <https://dkalita-cu.github.io/OTDspec/#hasDesignPattern> <https://dkalita-cu.github.io/OTDspec/#Floral> ;
+                                              <https://dkalita-cu.github.io/OTDspec/#hasColour> "Red"@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Patani
+<https://dkalita-cu.github.io/OTDspec/#Patani> rdf:type owl:NamedIndividual ,
+                                                        <https://dkalita-cu.github.io/OTDspec/#WrapperType> ;
+                                               <https://dkalita-cu.github.io/OTDspec/#associatedGender> <https://dkalita-cu.github.io/OTDspec/#Female> ;
+                                               <https://dkalita-cu.github.io/OTDspec/#associatedWeavingStyle> <https://dkalita-cu.github.io/OTDspec/#Plain_Weaving> ;
+                                               <https://dkalita-cu.github.io/OTDspec/#hasDesignPattern> <https://dkalita-cu.github.io/OTDspec/#Floral> ;
+                                               <https://dkalita-cu.github.io/OTDspec/#wornAt> "Waist"@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Phali
+<https://dkalita-cu.github.io/OTDspec/#Phali> rdf:type owl:NamedIndividual ,
+                                                       <https://dkalita-cu.github.io/OTDspec/#Waistcloth> ;
+                                              <https://dkalita-cu.github.io/OTDspec/#associatedGender> <https://dkalita-cu.github.io/OTDspec/#Unisex> ;
+                                              <https://dkalita-cu.github.io/OTDspec/#hasDesignPattern> <https://dkalita-cu.github.io/OTDspec/#Floral> ;
+                                              <https://dkalita-cu.github.io/OTDspec/#breadth> "12 inches"@en ;
+                                              <https://dkalita-cu.github.io/OTDspec/#hasColour> "Green"@en ;
+                                              <https://dkalita-cu.github.io/OTDspec/#length> "48 inches"@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Plain_Weaving
+<https://dkalita-cu.github.io/OTDspec/#Plain_Weaving> rdf:type owl:NamedIndividual ,
+                                                               <https://dkalita-cu.github.io/OTDspec/#WeavingStyle> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Rabha
+<https://dkalita-cu.github.io/OTDspec/#Rabha> rdf:type owl:NamedIndividual ,
+                                                       <https://dkalita-cu.github.io/OTDspec/#Community> ;
+                                              <https://dkalita-cu.github.io/OTDspec/#haveCostume> <https://dkalita-cu.github.io/OTDspec/#Kambang> ,
+                                                                                                  <https://dkalita-cu.github.io/OTDspec/#Khapang> ,
+                                                                                                  <https://dkalita-cu.github.io/OTDspec/#Pajal> ,
+                                                                                                  <https://dkalita-cu.github.io/OTDspec/#Pajar> ,
+                                                                                                  <https://dkalita-cu.github.io/OTDspec/#Patani> ,
+                                                                                                  <https://dkalita-cu.github.io/OTDspec/#Rufan> ;
+                                              <https://dkalita-cu.github.io/OTDspec/#haveDances> <https://dkalita-cu.github.io/OTDspec/#Abahoni> ,
+                                                                                                 <https://dkalita-cu.github.io/OTDspec/#Bohurongi> ,
+                                                                                                 <https://dkalita-cu.github.io/OTDspec/#Fakranti> ,
+                                                                                                 <https://dkalita-cu.github.io/OTDspec/#Hamjhar> ;
+                                              <https://dkalita-cu.github.io/OTDspec/#haveInstruments> <https://dkalita-cu.github.io/OTDspec/#Badung-duppa> ,
+                                                                                                      <https://dkalita-cu.github.io/OTDspec/#Da> ,
+                                                                                                      <https://dkalita-cu.github.io/OTDspec/#Daidi> ,
+                                                                                                      <https://dkalita-cu.github.io/OTDspec/#Gamana> ,
+                                                                                                      <https://dkalita-cu.github.io/OTDspec/#Jakoi> ,
+                                                                                                      <https://dkalita-cu.github.io/OTDspec/#Kara> ,
+                                                                                                      <https://dkalita-cu.github.io/OTDspec/#Kodal> ,
+                                                                                                      <https://dkalita-cu.github.io/OTDspec/#Kuthar> ,
+                                                                                                      <https://dkalita-cu.github.io/OTDspec/#Lunkhi> ,
+                                                                                                      <https://dkalita-cu.github.io/OTDspec/#Muk-Brangsi> ,
+                                                                                                      <https://dkalita-cu.github.io/OTDspec/#Singa> ,
+                                                                                                      <https://dkalita-cu.github.io/OTDspec/#Tal> ,
+                                                                                                      <https://dkalita-cu.github.io/OTDspec/#Tarsa> ,
+                                                                                                      <https://dkalita-cu.github.io/OTDspec/#Thorka> ;
+                                              <https://dkalita-cu.github.io/OTDspec/#haveOrnaments> <https://dkalita-cu.github.io/OTDspec/#Hancha> ,
+                                                                                                    <https://dkalita-cu.github.io/OTDspec/#Makring> ,
+                                                                                                    <https://dkalita-cu.github.io/OTDspec/#Nakapati> ,
+                                                                                                    <https://dkalita-cu.github.io/OTDspec/#Rubak_mala> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Religious_Social_Gatherings
+<https://dkalita-cu.github.io/OTDspec/#Religious_Social_Gatherings> rdf:type owl:NamedIndividual ,
+                                                                             <https://dkalita-cu.github.io/OTDspec/#ReligiousFestival> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Rubak_mala
+<https://dkalita-cu.github.io/OTDspec/#Rubak_mala> rdf:type owl:NamedIndividual ,
+                                                            <https://dkalita-cu.github.io/OTDspec/#Waistlet> ;
+                                                   <https://dkalita-cu.github.io/OTDspec/#associatedGender> <https://dkalita-cu.github.io/OTDspec/#Female> ;
+                                                   <https://dkalita-cu.github.io/OTDspec/#isMadeOf> <https://dkalita-cu.github.io/OTDspec/#Ivory> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Rufan
+<https://dkalita-cu.github.io/OTDspec/#Rufan> rdf:type owl:NamedIndividual ,
+                                                       <https://dkalita-cu.github.io/OTDspec/#WrapperType> ;
+                                              <https://dkalita-cu.github.io/OTDspec/#associatedGender> <https://dkalita-cu.github.io/OTDspec/#Female> ;
+                                              <https://dkalita-cu.github.io/OTDspec/#hasDesignPattern> <https://dkalita-cu.github.io/OTDspec/#Floral> ;
+                                              <https://dkalita-cu.github.io/OTDspec/#breadth> "24 inches"@en ;
+                                              <https://dkalita-cu.github.io/OTDspec/#hasColour> "Green"@en ,
+                                                                                                "Red"@en ;
+                                              <https://dkalita-cu.github.io/OTDspec/#length> "36 inches"@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Silver
+<https://dkalita-cu.github.io/OTDspec/#Silver> rdf:type owl:NamedIndividual ,
+                                                        <https://dkalita-cu.github.io/OTDspec/#Metal> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Singa
+<https://dkalita-cu.github.io/OTDspec/#Singa> rdf:type owl:NamedIndividual ,
+                                                       <https://dkalita-cu.github.io/OTDspec/#Aerophones> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Tal
+<https://dkalita-cu.github.io/OTDspec/#Tal> rdf:type owl:NamedIndividual ,
+                                                     <https://dkalita-cu.github.io/OTDspec/#Idiophones> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Tarsa
+<https://dkalita-cu.github.io/OTDspec/#Tarsa> rdf:type owl:NamedIndividual ,
+                                                       <https://dkalita-cu.github.io/OTDspec/#DoubleSidedLongDrum> ;
+                                              <https://dkalita-cu.github.io/OTDspec/#diameter> "6 to 9 inches"@en .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Thorka
+<https://dkalita-cu.github.io/OTDspec/#Thorka> rdf:type owl:NamedIndividual ,
+                                                        <https://dkalita-cu.github.io/OTDspec/#Idiophones> ;
+                                               <https://dkalita-cu.github.io/OTDspec/#isMadeOf> <https://dkalita-cu.github.io/OTDspec/#Bamboo> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Thungri
+<https://dkalita-cu.github.io/OTDspec/#Thungri> rdf:type owl:NamedIndividual ,
+                                                         <https://dkalita-cu.github.io/OTDspec/#Sword> ;
+                                                <https://dkalita-cu.github.io/OTDspec/#associatedGender> <https://dkalita-cu.github.io/OTDspec/#Female> ,
+                                                                                                         <https://dkalita-cu.github.io/OTDspec/#Male> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Unisex
+<https://dkalita-cu.github.io/OTDspec/#Unisex> rdf:type owl:NamedIndividual ,
+                                                        <https://dkalita-cu.github.io/OTDspec/#Gender> .
+
+
+###  https://dkalita-cu.github.io/OTDspec/#Wood
+<https://dkalita-cu.github.io/OTDspec/#Wood> rdf:type owl:NamedIndividual ,
+                                                      <https://dkalita-cu.github.io/OTDspec/#PlantPart> .
+
+
+###  Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/
